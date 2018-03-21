@@ -54,13 +54,19 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\x86\Debug\GradeBook.vshost.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
   <Target Name="BuildTarget">
-    <Message Text="Build selected" Importance="high"/>
+    <Message Text="Build selected" Importance="high" />
   </Target>
   <Target Name="Rebuild">
-    <Message Text="Rebuild selected" Importance="high"/>
+    <Message Text="Rebuild selected" Importance="high" />
   </Target>
   <Target Name="Clean">
-    <Message Text="Clean selected" Importance="high"/>
+    <Message Text="Clean selected" Importance="high" />
   </Target>
 </Project>
