@@ -54,7 +54,6 @@
     <None Include="xunit.runner.json" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\x86\Debug\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
@@ -74,13 +73,16 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\x86\Debug\GradeBookTests.vshost.exe" />
+  </ItemGroup>
   <Target Name="BuildTarget">
-    <Message Text="Build selected" Importance="high"/>
+    <Message Text="Build selected" Importance="high" />
   </Target>
   <Target Name="Rebuild">
-    <Message Text="Rebuild selected" Importance="high"/>
+    <Message Text="Rebuild selected" Importance="high" />
   </Target>
   <Target Name="Clean">
-    <Message Text="Clean selected" Importance="high"/>
+    <Message Text="Clean selected" Importance="high" />
   </Target>
 </Project>
