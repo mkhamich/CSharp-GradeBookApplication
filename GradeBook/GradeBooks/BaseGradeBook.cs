@@ -110,18 +110,21 @@ namespace GradeBook.GradeBooks
 
         public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
+            var baseGrade = 0;
+            baseGrade = studentType.ToString() != "Standard" && IsWeighted ? baseGrade + 1 : baseGrade;
+
             switch (letterGrade)
             {
                 case 'A':
-                    return 4;
+                    return baseGrade + 4;
                 case 'B':
-                    return 3;
+                    return baseGrade + 3;
                 case 'C':
-                    return 2;
+                    return baseGrade + 2;
                 case 'D':
-                    return 1;
+                    return baseGrade + 1;
             }
-            return 0;
+            return baseGrade;
         }
 
         public virtual void CalculateStatistics()
